@@ -1,10 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { Search, ChevronDown, ChevronRight, Bell } from "lucide-react";
 
 import { Input } from "@/components/ui/input";
+import { UpgradeModal } from "@/features/recuiter/components/company-billing";
 
 export function RecruiterHeader() {
+  const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-gray-50">
       <div className="flex h-17 items-center justify-between gap-4 px-4">
@@ -41,7 +47,10 @@ export function RecruiterHeader() {
           </button>
 
           {/* Upgrade button with thunder icon and text */}
-          <button className="flex h-9 items-center gap-1.5 rounded-lg bg-yellow-400 px-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-yellow-500">
+          <button
+            onClick={() => setIsUpgradeModalOpen(true)}
+            className="flex h-9 items-center gap-1.5 rounded-lg bg-yellow-400 px-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-yellow-500 cursor-pointer border-0"
+          >
             <Image
               src="/thunder.svg"
               alt="Upgrade"
@@ -68,6 +77,11 @@ export function RecruiterHeader() {
           </button>
         </div>
       </div>
+
+      <UpgradeModal
+        isOpen={isUpgradeModalOpen}
+        onClose={() => setIsUpgradeModalOpen(false)}
+      />
     </header>
   );
 }

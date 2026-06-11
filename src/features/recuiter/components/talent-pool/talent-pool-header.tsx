@@ -1,7 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-
 export function TalentPoolHeader() {
   return (
     <div className="mb-6">
