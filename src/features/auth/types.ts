@@ -1,4 +1,4 @@
-export type UserRole = "candidate" | "recruiter" | "admin";
+export type UserRole = "candidate" | "admin";
 
 export type AuthUser = {
   id: string;

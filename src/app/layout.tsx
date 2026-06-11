@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | UpNext",
   },
   description:
-    "UpNext connects IT candidates, recruiters, and companies through a focused recruitment workflow.",
+    "UpNext connects IT candidates and companies through a focused hiring workflow.",
 };
 
 export default function RootLayout({
