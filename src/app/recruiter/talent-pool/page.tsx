@@ -11,7 +11,7 @@ export default function TalentPoolPage() {
       <TalentPoolHeader />
       <TalentPoolStats />
 
-      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3 lg:items-start">
         <div className="lg:col-span-2">
           <TalentPoolTable />
         </div>

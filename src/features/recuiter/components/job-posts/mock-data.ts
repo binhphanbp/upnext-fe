@@ -1,0 +1,145 @@
+import { JobPost } from "./types";
+
+const addDays = (days: number) => {
+  return (
+    new Date(Date.now() + days * 24 * 60 * 60 * 1000).toISOString().split("T")[0] ?? ""
+  );
+};
+
+export const defaultJobs: JobPost[] = [
+  {
+    id: "job-frontend-senior",
+    title: "Senior Frontend Developer",
+    level: "Senior",
+    headcount: 2,
+    salaryRange: "30 - 45 trieu",
+    workModel: "Hybrid",
+    jobType: "Full-time",
+    location: "Ha Noi",
+    deadline: addDays(12),
+    assignee: "Nguyen Van A",
+    description:
+      "- Phat trien giao dien React/Next.js cho san pham tuyen dung.\n- Phoi hop voi Product va Design de hoan thien trai nghiem ung vien.\n- Toi uu hieu nang va kha nang tai su dung component.",
+    requirements:
+      "- Co toi thieu 3 nam kinh nghiem voi React va TypeScript.\n- Nam chac Next.js App Router va cach to chuc component.\n- Co kinh nghiem viet test va review code.",
+    benefits:
+      "- Thuong theo hieu qua.\n- Lam viec hybrid linh hoat.\n- Bao hiem suc khoe va ngan sach hoc tap.",
+    requiredSkills: ["React", "Next.js", "TypeScript"],
+    preferredSkills: ["Tailwind CSS", "Vitest", "React Query"],
+    views: 1240,
+    cvReceived: 38,
+    highMatchCv: 9,
+    avgMatchScore: 84,
+    status: "Đang hoạt động",
+    weights: {
+      requiredSkills: 30,
+      preferredSkills: 20,
+      experience: 20,
+      salary: 10,
+      location: 10,
+      language: 5,
+      degree: 5,
+    },
+  },
+  {
+    id: "job-product-designer",
+    title: "Product Designer",
+    level: "Middle",
+    headcount: 1,
+    salaryRange: "22 - 32 trieu",
+    workModel: "Onsite",
+    jobType: "Full-time",
+    location: "Da Nang",
+    deadline: addDays(6),
+    assignee: "Tran Thi B",
+    description:
+      "- Thiet ke flow va giao dien cho dashboard recruiter.\n- Lam viec cung team frontend de chuan hoa design system.",
+    requirements:
+      "- Co portfolio ve SaaS/B2B.\n- Su dung tot Figma.\n- Co kha nang nghien cuu nguoi dung.",
+    benefits:
+      "- Luong thang 13.\n- Review luong 2 lan moi nam.\n- Ho tro thiet bi lam viec.",
+    requiredSkills: ["Figma", "UX Research"],
+    preferredSkills: ["Design System", "Motion"],
+    views: 860,
+    cvReceived: 21,
+    highMatchCv: 5,
+    avgMatchScore: 79,
+    status: "Chờ duyệt",
+    weights: {
+      requiredSkills: 35,
+      preferredSkills: 15,
+      experience: 20,
+      salary: 10,
+      location: 10,
+      language: 5,
+      degree: 5,
+    },
+  },
+  {
+    id: "job-hrbp-draft",
+    title: "HRBP Executive",
+    level: "Junior",
+    headcount: 1,
+    salaryRange: "",
+    workModel: "Hybrid",
+    jobType: "Full-time",
+    location: "Ho Chi Minh City",
+    deadline: addDays(18),
+    assignee: "Le Van C",
+    description: "Dang soan noi dung mo ta cong viec.",
+    requirements: "Can kinh nghiem HR generalist.",
+    benefits: "",
+    requiredSkills: ["Communication"],
+    preferredSkills: ["Excel"],
+    views: 0,
+    cvReceived: 0,
+    highMatchCv: 0,
+    avgMatchScore: 0,
+    status: "Nháp",
+    weights: {
+      requiredSkills: 30,
+      preferredSkills: 20,
+      experience: 20,
+      salary: 10,
+      location: 10,
+      language: 5,
+      degree: 5,
+    },
+  },
+  {
+    id: "job-backend-rejected",
+    title: "Backend Engineer tuyen gap",
+    level: "Senior",
+    headcount: 1,
+    salaryRange: "35 - 50 trieu",
+    workModel: "Remote",
+    jobType: "Full-time",
+    location: "Ho Chi Minh City",
+    deadline: addDays(-2),
+    assignee: "Pham Van D",
+    description:
+      "- Xay dung API cho nen tang ATS.\n- Toi uu truy van va kha nang mo rong he thong.",
+    requirements:
+      "- Kinh nghiem Node.js/NestJS.\n- Lam viec voi PostgreSQL va Redis.\n- Co tu duy ve system design.",
+    benefits:
+      "- Thuong theo quy.\n- Goi bao hiem nang cao.\n- Work from home 3 ngay moi tuan.",
+    requiredSkills: ["Node.js", "PostgreSQL", "Redis"],
+    preferredSkills: ["Docker", "AWS"],
+    views: 410,
+    cvReceived: 7,
+    highMatchCv: 1,
+    avgMatchScore: 66,
+    status: "Bị từ chối",
+    rejectionReason:
+      "Tieu de chua cum tu mang tinh giat tit va noi dung bai dang can bo sung ro rang hon ve phuc loi.",
+    weights: {
+      requiredSkills: 35,
+      preferredSkills: 15,
+      experience: 20,
+      salary: 10,
+      location: 10,
+      language: 5,
+      degree: 5,
+    },
+  },
+];
