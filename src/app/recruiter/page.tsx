@@ -36,7 +36,7 @@ export default function RecruiterPage() {
       </div>
 
       {/* Row 4: Job Efficiency, Services Package & Status Alerts */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         <div className="lg:col-span-6">
           <JobPostEfficiency />
         </div>
