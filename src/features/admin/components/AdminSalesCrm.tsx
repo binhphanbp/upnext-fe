@@ -99,7 +99,7 @@ export function AdminSalesCrm() {
           <PanelHeader
             icon={<Briefcase size={17} />}
             title="Funnel sales"
-            action="Dự báo"
+            action="Chi tiết"
           />
           <div style={{ width: "100%", height: 260, padding: "10px 0" }}>
             {isMounted && (
@@ -142,7 +142,7 @@ export function AdminSalesCrm() {
           <PanelHeader
             icon={<Banknote size={17} />}
             title="Doanh thu gói"
-            action="Sổ cái"
+            action="Chi tiết"
           />
           <div style={{ width: "100%", height: 260, padding: "10px 0" }}>
             {isMounted && (
@@ -193,7 +193,7 @@ export function AdminSalesCrm() {
           <PanelHeader
             icon={<TrendingUp size={17} />}
             title="Pipeline deal"
-            action="Thêm deal"
+            action="Chi tiết"
           />
           <div style={{ padding: "8px 0" }}>
             {pipelineDeals.map((deal, index) => (
@@ -242,7 +242,7 @@ export function AdminSalesCrm() {
           <PanelHeader
             icon={<Receipt size={17} />}
             title="Kiểm soát doanh thu"
-            action="Mở sổ cái"
+            action="Chi tiết"
           />
           <div
             style={{

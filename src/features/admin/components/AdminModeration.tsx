@@ -64,7 +64,7 @@ export function AdminModeration() {
           note="16 tự ẩn, 5 khiếu nại"
         />
         <InsightCard
-          title="Dương tính giả"
+          title="Cảnh báo sai"
           value="8%"
           icon={CheckCircle2}
           color="#10a778"
@@ -75,7 +75,7 @@ export function AdminModeration() {
           value="18 phút"
           icon={Gauge}
           color="#3b82f6"
-          note="P95 dưới 45 phút"
+          note="95% xử lý dưới 45 phút"
         />
         <InsightCard
           title="Tín hiệu cấm"

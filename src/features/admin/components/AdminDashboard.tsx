@@ -53,9 +53,9 @@ const revenueByPlan = [
 ];
 
 const roleDistribution = [
-  { name: "Ứng viên", value: 72, color: "#3b82f6" },
-  { name: "Nhà tuyển dụng", value: 21, color: "#10a778" },
-  { name: "Admin", value: 7, color: "#574bf5" },
+  { name: "Ứng viên", value: 72, color: "#10b981" },
+  { name: "Nhà tuyển dụng", value: 21, color: "#6366f1" },
+  { name: "Admin", value: 7, color: "#0ea5e9" },
 ];
 
 const moderationTrend = [
@@ -88,28 +88,28 @@ export function AdminDashboard() {
           title="Người dùng mới"
           value="1,284"
           icon={UsersRound}
-          color="#3b82f6"
+          color="#475569"
           note="Ứng viên +18%, nhà tuyển dụng +7%"
         />
         <InsightCard
           title="Tin mới"
           value="386"
           icon={BriefcaseBusiness}
-          color="#574bf5"
+          color="#475569"
           note="27 tin chờ kiểm duyệt"
         />
         <InsightCard
           title="Doanh thu"
-          value="$42.8k"
+          value="42.000.000 "
           icon={Banknote}
-          color="#10a778"
+          color="#475569"
           note="Doanh thu gói dịch vụ 30 ngày"
         />
         <InsightCard
           title="Độ trễ AI"
           value="1.4s"
           icon={Gauge}
-          color="#f59e0b"
+          color="#475569"
           note="Match scoring p95"
         />
       </div>
@@ -125,32 +125,27 @@ export function AdminDashboard() {
             <AreaChart data={adminGrowth}>
               <defs>
                 <linearGradient id="candidateGrowth" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.34} />
-                  <stop offset="95%" stopColor="#3b82f6" stopOpacity={0.02} />
+                  <stop offset="5%" stopColor="#10b981" stopOpacity={0.15} />
+                  <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
                 </linearGradient>
                 <linearGradient id="employerGrowth" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="5%" stopColor="#10a778" stopOpacity={0.34} />
-                  <stop offset="95%" stopColor="#10a778" stopOpacity={0.02} />
+                  <stop offset="5%" stopColor="#6366f1" stopOpacity={0.15} />
+                  <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <CartesianGrid vertical={false} stroke="#ececf2" strokeDasharray="5 5" />
+              <CartesianGrid vertical={false} stroke="#f1f5f9" strokeDasharray="5 5" />
               <XAxis
                 dataKey="day"
                 axisLine={false}
                 tickLine={false}
                 tick={{ fill: "#858897", fontSize: 11 }}
               />
-              <YAxis
-                axisLine={false}
-                tickLine={false}
-                tick={{ fill: "#858897", fontSize: 11 }}
-                width={42}
-              />
+              <YAxis hide />
               <Tooltip content={<ChartTooltip />} />
               <Area
                 type="monotone"
                 dataKey="candidates"
-                stroke="#3b82f6"
+                stroke="#10b981"
                 strokeWidth={2.4}
                 fill="url(#candidateGrowth)"
                 isAnimationActive={false}
@@ -158,7 +153,7 @@ export function AdminDashboard() {
               <Area
                 type="monotone"
                 dataKey="employers"
-                stroke="#10a778"
+                stroke="#6366f1"
                 strokeWidth={2.4}
                 fill="url(#employerGrowth)"
                 isAnimationActive={false}
@@ -221,23 +216,18 @@ export function AdminDashboard() {
           />
           <ResponsiveContainer width="100%" height={230}>
             <BarChart data={revenueByPlan}>
-              <CartesianGrid vertical={false} stroke="#ececf2" />
+              <CartesianGrid vertical={false} stroke="#f1f5f9" strokeDasharray="5 5" />
               <XAxis
                 dataKey="plan"
                 axisLine={false}
                 tickLine={false}
                 tick={{ fill: "#858897", fontSize: 11 }}
               />
-              <YAxis
-                axisLine={false}
-                tickLine={false}
-                tick={{ fill: "#858897", fontSize: 11 }}
-                width={42}
-              />
+              <YAxis hide />
               <Tooltip content={<ChartTooltip />} />
               <Bar
                 dataKey="revenue"
-                fill="#574bf5"
+                fill="#10b981"
                 radius={[8, 8, 2, 2]}
                 maxBarSize={44}
                 isAnimationActive={false}
@@ -254,7 +244,7 @@ export function AdminDashboard() {
           />
           <ResponsiveContainer width="100%" height={220}>
             <LineChart data={moderationTrend}>
-              <CartesianGrid vertical={false} stroke="#ececf2" strokeDasharray="5 5" />
+              <CartesianGrid vertical={false} stroke="#f1f5f9" strokeDasharray="5 5" />
               <XAxis
                 dataKey="day"
                 axisLine={false}
@@ -282,7 +272,7 @@ export function AdminDashboard() {
               <Line
                 type="monotone"
                 dataKey="restored"
-                stroke="#10a778"
+                stroke="#10b981"
                 strokeWidth={2.4}
                 dot={false}
                 isAnimationActive={false}
