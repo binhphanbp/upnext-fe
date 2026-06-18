@@ -88,7 +88,7 @@ export function Avatar({
   index: number;
   large?: boolean;
 }) {
-  const colors = ["#3b82f6", "#10a778", "#574bf5", "#f59e0b", "#ef4444"];
+  const colors = ["#334155", "#0f766e", "#475569", "#b45309", "#be123c"];
 
   // Dùng .pop() để lấy từ cuối cùng và ?. để tránh lỗi undefined
   const initial = name.split(" ").pop()?.charAt(0) || "";

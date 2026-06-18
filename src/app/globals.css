@@ -1,3 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--color-action-primary-default);
+  --color-foreground: var(--color-text-primary);
+  --color-muted: var(--color-text-tertiary);
+  --color-surface: var(--color-surface-default);
+  --color-surface-subtle: var(--color-surface-muted);
+  --color-border: var(--color-border-subtle);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -571,12 +582,16 @@ input:focus-visible {
   align-items: center;
   gap: 7px;
   padding: 0 10px;
-  color: #2d2000;
+  color: var(--color-text-secondary);
   font-size: 12px;
-  font-weight: 850;
-  background: linear-gradient(#ffe06f, #f5ba22);
-  border: 1px solid #dca611;
+  font-weight: 700;
+  background: var(--color-surface-default);
+  border: 1px solid var(--color-border-subtle);
   border-radius: 8px;
+}
+
+.plan-pill:hover {
+  background: var(--color-surface-muted);
 }
 
 .plan-pill span {
@@ -696,11 +711,15 @@ input:focus-visible {
   align-items: center;
   gap: 6px;
   padding: 0 12px;
-  color: #2b1a00;
+  color: var(--color-text-primary);
   font-size: 12px;
-  font-weight: 850;
-  background: linear-gradient(#ffd95f, #f3b91f);
-  border: 1px solid #d9a10d;
+  font-weight: 700;
+  background: var(--color-surface-default);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.upgrade:hover {
+  background: var(--color-surface-muted);
 }
 
 .bell {
